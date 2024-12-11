@@ -24,11 +24,11 @@ export default [
             'react-refresh': reactRefresh,
         },
         rules: {
-	  'semi': ['warn', 'always'],
-	  'quotes': ['warn', 'single'],
-	  'indent': ['warn', 4, {
-                'SwitchCase': 2
-		  }],
+            'semi': ['warn', 'always'],
+            'quotes': ['warn', 'single'],
+            'indent': ['warn', 4, {
+				  'SwitchCase': 2
+            }],
             'react/jsx-indent': ['error', 4],
             'react/jsx-indent-props': ['error', 4],
             ...js.configs.recommended.rules,
@@ -40,6 +40,7 @@ export default [
                 'warn',
                 { allowConstantExport: true },
             ],
+            'no-unused-vars': 'warn',
         },
     },
 ];
