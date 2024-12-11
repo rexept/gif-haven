@@ -1,7 +1,7 @@
 # Gif Haven
 Search & stash gifs from GIPHY
 
-# Instruction to run locally
+# Instructions to run locally
 Create a .env file with GIPHY_API_KEY specified.\
 Example for linux:
 ```bash
