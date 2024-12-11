@@ -7,4 +7,4 @@ Example for linux:
 ```bash
 echo "GIPHY_API_KEY=XXXXXXXXXXXXXXXXX" >> .env
 ```
-Run `npm install && npm run dev` and your good to go!
+Run `npm install && npm run dev` and you're good to go!
