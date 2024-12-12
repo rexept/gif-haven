@@ -3,10 +3,19 @@ import PropTypes from 'prop-types';
 
 const GifCard = ({ gif }) => {
 	return (
-		<div className='container'>
-			<img className='card' src={gif.images.downsized.url} alt={gif.alt_text || 'GIF'} />
-			<div className="text">
+		<div className='card-container'>
+
+			<a href={gif.images.downsized.url}>
+				<img className='card-img' src={gif.images.downsized.url} alt={gif.alt_text || 'GIF'} />
+			</a>
+			<div className='card-description'>
+				{gif.title != ' ' ? 'Title: ' + gif.title : 'No Title'}
+				<br />
+				{gif.username != '' ? 'Username: ' + gif.username : 'No Username'}
 			</div>
+			<a href='' className='card-btn'>
+				Favorite ❤️
+			</a>
 		</div>
 	);
 };

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const GifList = ({ gifs }) => {
 	return (
-		<div className='container'>
+		<div className='gif-list-container'>
 			{gifs ? gifs.map((gif, i) => {
 				return <GifCard
 					key={i}
