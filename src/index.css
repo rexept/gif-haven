@@ -16,12 +16,12 @@
 }
 
 body {
-  margin: 0;
+  margin: 3rem;
+  margin-right: 5rem;
   display: flex;
-  place-items: center;
-  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: center;
 }
 
 h1 {

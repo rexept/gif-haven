@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import makeApiCall from '../services/api';
 import './SearchBar.css';
@@ -9,18 +9,25 @@ const SearchBar = ({ onSearchUpdate }) => {
 
 	const handleInputChangeT = (value) => {
 		setInput(value);
-		makeApiCall(value, setGifs, 8);
-		onSearchUpdate(gifs);
 	};
 
 	const handleInputChangeP = (value) => {
 		setInput(value);
 		makeApiCall(value, setGifs, 30);
-		onSearchUpdate(gifs);
 	};
 
+	useEffect(() => {
+		onSearchUpdate(gifs);
+	}, [gifs, onSearchUpdate]);
+
+	useEffect(() => {
+		if (input) {
+			makeApiCall(input, setGifs, 8);
+		}
+	}, [input]);
+
 	return (
-		<div className='container'>
+		<div className='search-container'>
 			<FaSearch id='search-icon' />
 			<input
 				placeholder='Search...'
@@ -32,6 +39,7 @@ const SearchBar = ({ onSearchUpdate }) => {
 					}
 				}}
 			/>
+			<button className='search-button' onClick={() => handleInputChangeP(input)}>Search</button>
 		</div>
 	);
 };
