@@ -9,7 +9,8 @@ const GifCard = ({ gif }) => {
 				<img className='card-img' src={gif.images.downsized.url} alt={gif.alt_text || 'GIF'} />
 			</a>
 			<div className='card-description'>
-				{gif.title != ' ' ? 'Title: ' + gif.title : 'No Title'}
+				{ /* Titles are usually plagued by usernames so we need to trim it */}
+				{gif.title != ' ' ? 'Title: ' + gif.title.split(/by\s+/i)[0].trim() : 'No Title'}
 				<br />
 				{gif.username != '' ? 'Username: ' + gif.username : 'No Username'}
 			</div>
