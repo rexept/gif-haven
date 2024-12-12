@@ -27,9 +27,10 @@ const SearchBar = ({ onSearchUpdate }) => {
 	}, [input]);
 
 	return (
-		<div className='search-container'>
-			<FaSearch id='search-icon' />
+		<div data-testid='SearchBar-container' className='search-container'>
+			<FaSearch data-testid='SearchBar-icon' id='search-icon' />
 			<input
+				data-testid='SearchBar-input'
 				placeholder='Search...'
 				value={input}
 				onChange={(e) => handleInputChangeT(e.target.value)}
@@ -39,7 +40,7 @@ const SearchBar = ({ onSearchUpdate }) => {
 					}
 				}}
 			/>
-			<button className='search-button' onClick={() => handleInputChangeP(input)}>Search</button>
+			<button data-testid='SearchBar-button' className='search-button' onClick={() => handleInputChangeP(input)}>Search</button>
 		</div>
 	);
 };
