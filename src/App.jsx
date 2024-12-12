@@ -1,31 +1,15 @@
-import './App.css';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { GifList } from './components';
-
-const API_KEY = import.meta.env.VITE_GIPHY_API_KEY;
-const BASE_URL = 'https://api.giphy.com/v1/gifs/search';
-
+import { useState } from 'react';
+import { GifList, SearchBar } from './components';
 
 const App = () => {
 	const [gifs, setGifs] = useState([]);
 
-	const makeApiCall = (query, limit = 10) => {
-		axios.get(`${BASE_URL}?api_key=${API_KEY}&q=${query}&limit=${limit}&rating=g&lang=en`)
-			.then(res => {
-				console.log(res);
-				setGifs(res.data.data);
-			}).catch(err => {
-				console.log(err);
-			});
+	const handleSearchUpdate = (newSearchObject) => {
+		setGifs(newSearchObject);
 	};
-
-	useEffect(() => {
-		makeApiCall('terminal', 4);
-	}, []);
-
 	return (
 		<>
+			<SearchBar onSearchUpdate={handleSearchUpdate} />
 			<GifList gifs={gifs} />
 		</>
 	);

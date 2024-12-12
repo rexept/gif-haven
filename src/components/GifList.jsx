@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './GifList.css';
 import { GifCard } from './index';
 import PropTypes from 'prop-types';
