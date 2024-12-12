@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import makeApiCall from '../services/api';
+import './SearchBar.css';
 
 const SearchBar = ({ onSearchUpdate }) => {
 	const [input, setInput] = useState('');
