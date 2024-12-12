@@ -6,7 +6,7 @@ const StashedGifsButton = () => {
 			<button
 				data-testid='StashedGifsButton-button'
 				className='StashedGifsButton-button'
-			>Stashed Gifs</button>
+			>Stashed Gifs 📦</button>
 		</div>
 	);
 };

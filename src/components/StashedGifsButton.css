@@ -1,9 +1,23 @@
 .StashedGifsButton-container {
   display: flex;
+  width: 100%;
 }
 
 .StashedGifsButton-button {
-  border-radius: 4px;
+  background-color: crimson;
+  width: 50%;
+  border-radius: 10px;
   border: none;
+  padding: 0.4rem;
+  margin: 0.5rem;
+  transition: background-color 0.1s ease, transform 0.3s ease;
+}
+
+.StashedGifsButton-button:hover {
+  transform: scale(1.05);
+}
+
+.StashedGifsButton-button:active {
+  background-color: #9B0A22;
 }
 
