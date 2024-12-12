@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 
 const GifCard = ({ gif }) => {
 	return (
-		<div className='card-container'>
+		<div data-testid='GifCard-container' className='card-container'>
 
-			<a href={gif.images.downsized.url}>
-				<img className='card-img' src={gif.images.downsized.url} alt={gif.alt_text || 'GIF'} />
+			<a data-testid='GifCard-gif-link' href={gif.images.downsized.url}>
+				<img data-testid='GifCard-gif' className='card-img' src={gif.images.downsized.url} alt={gif.alt_text || 'GIF'} />
 			</a>
-			<div className='card-description'>
+			<div data-testid='GifCard-description' className='card-description'>
 				{ /* Titles are usually plagued by usernames so we need to trim it */}
 				{gif.title != ' ' ? 'Title: ' + gif.title.split(/by\s+/i)[0].trim() : 'No Title'}
 				<br />
 				<br />
 				{gif.username != '' ? 'Username: ' + gif.username : 'No Username'}
 			</div>
-			<a href='' className='card-btn'>
+			<a data-testid='GifCard-favorite' href='' className='card-btn'>
 				Favorite ❤️
 			</a>
 		</div>
