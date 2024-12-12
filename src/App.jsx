@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GifList, SearchBar } from './components';
+import { Hamburger, GifList, SearchBar } from './components';
 
 const App = () => {
 	const [gifs, setGifs] = useState([]);
@@ -9,6 +9,7 @@ const App = () => {
 	};
 	return (
 		<>
+			<Hamburger />
 			<SearchBar onSearchUpdate={handleSearchUpdate} />
 			<GifList gifs={gifs} />
 		</>
