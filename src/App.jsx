@@ -21,7 +21,7 @@ const App = () => {
 	};
 
 	useEffect(() => {
-		makeApiCall('terminal', 5);
+		makeApiCall('terminal', 4);
 	}, []);
 
 	return (

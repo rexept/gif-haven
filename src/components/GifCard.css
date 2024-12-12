@@ -23,6 +23,7 @@
 .card-description {
   color: white;
   margin: 0.5rem 5%;
+  text-align: left;
 }
 
 .card-btn {
