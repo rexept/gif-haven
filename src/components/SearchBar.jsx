@@ -1,8 +1,8 @@
 const SearchBar = () => {
-    return (
-        <>
-        </>
-    );
+	return (
+		<div className='container'>
+		</div>
+	);
 };
 
 export default SearchBar;
