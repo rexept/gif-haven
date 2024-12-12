@@ -15,8 +15,8 @@ const GifCard = ({ gif }) => {
 				<br />
 				{gif.username != '' ? 'Username: ' + gif.username : 'No Username'}
 			</div>
-			<a data-testid='GifCard-favorite' href='' className='card-btn'>
-				Favorite ❤️
+			<a data-testid='GifCard-stash' href='' className='card-btn'>
+				Stash 🗳️
 			</a>
 		</div>
 	);

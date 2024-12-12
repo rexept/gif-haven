@@ -24,6 +24,6 @@ describe('GifCard', () => {
 		expect(screen.getByTestId('GifCard-gif-link')).toBeDefined();
 		expect(screen.getByTestId('GifCard-gif')).toBeDefined();
 		expect(screen.getByTestId('GifCard-description')).toBeDefined();
-		expect(screen.getByTestId('GifCard-favorite')).toBeDefined();
+		expect(screen.getByTestId('GifCard-stash')).toBeDefined();
 	});
 });
