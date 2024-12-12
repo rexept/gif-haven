@@ -7,7 +7,13 @@ const SearchBar = ({ onSearchUpdate }) => {
 	const [input, setInput] = useState('');
 	const [gifs, setGifs] = useState([]);
 
-	const handleInputChange = (value) => {
+	const handleInputChangeT = (value) => {
+		setInput(value);
+		makeApiCall(value, setGifs, 8);
+		onSearchUpdate(gifs);
+	};
+
+	const handleInputChangeP = (value) => {
 		setInput(value);
 		makeApiCall(value, setGifs, 30);
 		onSearchUpdate(gifs);
@@ -19,7 +25,12 @@ const SearchBar = ({ onSearchUpdate }) => {
 			<input
 				placeholder='Search...'
 				value={input}
-				onChange={(e) => handleInputChange(e.target.value)}
+				onChange={(e) => handleInputChangeT(e.target.value)}
+				onKeyDown={(e) => {
+					if (e.key === 'Enter') {
+						handleInputChangeP(e.target.value);
+					}
+				}}
 			/>
 		</div>
 	);
