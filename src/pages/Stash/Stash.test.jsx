@@ -1,8 +1,8 @@
-import { describe, test, expect, vi, beforeAll } from 'vitest';
+import { describe, test, expect, } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import StashedGifs from './index';
+import Stash from './index';
 
-describe('StashedGifsPage', () => {
+describe('Stash', () => {
 	test('renders', () => {
 		render(<StashedGifs />);
 		expect(screen.getByTestId('StashedGifs-container')).toBeDefined();
