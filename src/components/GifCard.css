@@ -1,17 +1,19 @@
 .card-container {
-	width: 15rem;
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
+	width: 15rem;
 	margin: 0.5rem;
 	height: fit-content;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-	transition: background-color 0.3s ease, transform 0.3s ease;
+	transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+	color: black;
 }
 
 .card-container:hover {
 	transform: scale(1.1);
 	background-color: #2E2E2E;
+	color: white;
 }
 
 .card-img {
@@ -21,23 +23,22 @@
 }
 
 .card-description {
-  color: white;
-  margin: 0.5rem 5%;
-  text-align: left;
+	margin: 0.5rem 5%;
+	text-align: left;
 }
 
 .card-btn {
-  text-align: center;
-  width: 75%;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  background-color: #25a;
-  color: white;
-  text-decoration: none;
-  margin: 0.5rem auto;
+	text-align: center;
+	width: 75%;
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+	background-color: #25a;
+	color: white;
+	text-decoration: none;
+	margin: 0.5rem auto;
 }
 
 .card-btn:hover {
-  color: white;
-  background-color: #26a;
+	color: black;
+	background-color: #26a;
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css';
 import { GifList, SearchBar, StashedGifsButton } from './components';
 
 const App = () => {
@@ -8,11 +9,13 @@ const App = () => {
 		setGifs(newSearchObject);
 	};
 	return (
-		<>
-			<SearchBar onSearchUpdate={handleSearchUpdate} />
-			<StashedGifsButton />
+		<div className='app-container'>
+			<div className='header'>
+				<SearchBar onSearchUpdate={handleSearchUpdate} />
+				<StashedGifsButton />
+			</div>
 			<GifList gifs={gifs} />
-		</>
+		</div>
 	);
 };
 
