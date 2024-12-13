@@ -4,7 +4,7 @@ import Stash from './index';
 
 describe('Stash', () => {
 	test('renders', () => {
-		render(<StashedGifs />);
+		render(<Stash />);
 		expect(screen.getByTestId('StashedGifs-container')).toBeDefined();
 		expect(screen.getByTestId('StashedGifs-exit-button')).toBeDefined();
 		expect(screen.getByTestId('StashedGifs-gifs-container')).toBeDefined();
