@@ -1,9 +1,9 @@
-.app-container {
+.home-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-flow: row wrap;
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
@@ -12,8 +12,8 @@
 .header {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	place-items: center;
 	width: 100%;
-	padding: 1rem;
 	flex-direction: column;
-	min-width: 0;
 }
