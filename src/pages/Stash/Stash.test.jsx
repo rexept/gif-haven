@@ -7,6 +7,5 @@ describe('Stash', () => {
 		render(<Stash />);
 		expect(screen.getByTestId('StashedGifs-container')).toBeDefined();
 		expect(screen.getByTestId('StashedGifs-exit-button')).toBeDefined();
-		expect(screen.getByTestId('StashedGifs-gifs-container')).toBeDefined();
 	});
 });

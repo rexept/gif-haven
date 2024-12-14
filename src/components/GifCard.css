@@ -29,16 +29,16 @@
 
 .card-btn {
 	text-align: center;
-	width: 75%;
-	border-radius: 5px;
+	width: 85%;
+	border-radius: 12px;
+	border: none;
 	padding: 0.5rem 1rem;
 	background-color: #25a;
 	color: white;
-	text-decoration: none;
 	margin: 0.5rem auto;
+	font-size: 1.2rem;
 }
 
 .card-btn:hover {
-	color: black;
 	background-color: #26a;
 }

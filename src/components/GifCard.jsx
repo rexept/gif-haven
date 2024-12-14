@@ -1,7 +1,26 @@
+import { useState, useEffect } from 'react';
+import { useGifStorage } from '../hooks/useGifStorage';
 import './GifCard.css';
 import PropTypes from 'prop-types';
 
 const GifCard = ({ gif }) => {
+	const { gifs, addGif, removeGif } = useGifStorage();
+
+	const [isGifInStash, setIsGifInStash] = useState(false);
+
+	useEffect(() => {
+		const checkGifInStash = gifs.some(existingGif => existingGif.id === gif.id);
+		setIsGifInStash(checkGifInStash);
+	}, [gifs]);
+
+	const gifToggle = () => {
+		if (isGifInStash) {
+			addGif(gif);
+		} else {
+			removeGif(gif);
+		}
+	};
+
 	return (
 		<div data-testid='GifCard-container' className='card-container'>
 
@@ -15,9 +34,9 @@ const GifCard = ({ gif }) => {
 				<br />
 				{gif.username != '' ? 'Username: ' + gif.username : 'No Username'}
 			</div>
-			<a data-testid='GifCard-stash' href='' className='card-btn'>
-				Stash 🗳️
-			</a>
+			<button data-testid='GifCard-stash' onClick={gifToggle} className='card-btn'>
+				{isGifInStash ? 'Remove 🗑️' : 'Stash 🗳️'}
+			</button>
 		</div>
 	);
 };

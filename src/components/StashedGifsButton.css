@@ -1,11 +1,12 @@
 .StashedGifsButton-container {
 	display: flex;
 	width: 250px;
-	scale: 1.5;
+	scale: 1.2;
 }
 
 .StashedGifsButton-button {
 	background-color: crimson;
+	color: white;
 	width: 50%;
 	border-radius: 10px;
 	border: none;
@@ -14,6 +15,7 @@
 	margin-top: 1.5rem;
 	transition: background-color 0.1s ease, transform 0.3s ease;
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+	text-decoration: none;
 }
 
 .StashedGifsButton-button:hover {
