@@ -34,7 +34,7 @@ const GifCard = ({ gif }) => {
 				<br />
 				{gif.username != '' ? 'Username: ' + gif.username : 'No Username'}
 			</div>
-			<button data-testid='GifCard-stash' onClick={gifToggle} className='card-btn'>
+			<button data-testid='GifCard-stash' onClick={gifToggle} className={`card-btn ${isGifInStash ? 'remove' : 'stash'}`}>
 				{isGifInStash ? 'Remove 🗑️' : 'Stash 🗳️'}
 			</button>
 		</div>

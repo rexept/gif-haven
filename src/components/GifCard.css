@@ -38,13 +38,35 @@
 	border-radius: 12px;
 	border: none;
 	padding: 0.5rem 1rem;
-	background-color: #25a;
 	color: white;
 	margin: 0.5rem auto;
 	margin-bottom: 1rem;
 	font-size: 1.2rem;
+	transition: background-color 0.1s ease, transform 0.3s ease;
 }
 
-.card-btn:hover {
+.card-btn.stash {
+	background-color: royalblue;
+}
+
+.card-btn.remove {
+	background-color: crimson;
+}
+
+.card-btn.stash:hover {
 	background-color: #26a;
+	transform: scale(1.03);
+}
+
+.card-btn.remove:hover {
+	background-color: #9B0A1D;
+	transform: scale(1.03);
+}
+
+.card-btn.stash:active {
+	background-color: royalblue;
+}
+
+.card-btn.remove:active {
+	background-color: crimson;
 }
