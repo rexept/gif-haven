@@ -1,0 +1,28 @@
+.stash-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.stash-back-arrow {
+	font-size: 3rem;
+	color: black;
+	margin: 2rem;
+	transition: color 0.3s ease;
+}
+
+.stash-back-arrow::before {
+	content: '';
+	background: linear-gradient(black, transparent);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.icon-container:hover::before {
+	opacity: 1;
+}
+
+.stash-back-arrow:hover {
+	color: royalblue;
+}
