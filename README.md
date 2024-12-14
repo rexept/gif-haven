@@ -1,8 +1,6 @@
 # Gif Haven
 Search & stash gifs from GIPHY
 
-*still in development*
-
 # Instructions to run locally
 Clone the repository & go into it:
 ```bash
