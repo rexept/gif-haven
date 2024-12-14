@@ -14,3 +14,8 @@ Example for linux:
 echo "VITE_GIPHY_API_KEY=XXXXXXXXXXXXXXXXX" >> .env
 ```
 Run `npm install && npm run dev` and you're good to go!
+
+
+# Screenshots
+![Home Page Screenshot](./screenshots/home_page_screenshot.png)
+![Stashed Gifs Page Screenshot](./screenshots/my_stash_screenshot.png)
