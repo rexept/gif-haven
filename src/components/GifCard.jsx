@@ -11,13 +11,13 @@ const GifCard = ({ gif }) => {
 	useEffect(() => {
 		const checkGifInStash = gifs.some(existingGif => existingGif.id === gif.id);
 		setIsGifInStash(checkGifInStash);
-	}, [gifs]);
+	}, [gifs, gif.id]);
 
 	const gifToggle = () => {
 		if (isGifInStash) {
-			addGif(gif);
-		} else {
 			removeGif(gif);
+		} else {
+			addGif(gif);
 		}
 	};
 
