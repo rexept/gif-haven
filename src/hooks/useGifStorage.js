@@ -19,14 +19,17 @@ export const useGifStorage = () => {
 	const addGif = (newGif) => {
 		const gifs = localStorage.getItem(key);
 		const parsedGifs = gifs ? JSON.parse(gifs) : [];
-		const compiledGifs = [...parsedGifs, newGif];
-		setGifs(compiledGifs);
-		localStorage.setItem(key, JSON.stringify(compiledGifs));
+		if (!parsedGifs.some(gif => gif.id === newGif.id)) {
+			const compiledGifs = [...parsedGifs, newGif];
+			setGifs(compiledGifs);
+			localStorage.setItem(key, JSON.stringify(compiledGifs));
+		}
 	};
 
 	const removeGif = (gifToRemove) => {
-		const gifs = getGifs();
-		const compiledGifs = gifs.filter(gif => gif !== gifToRemove);
+		const gifs = localStorage.getItem(key);
+		const parsedGifs = gifs ? JSON.parse(gifs) : [];
+		const compiledGifs = parsedGifs.filter(gif => gif.id !== gifToRemove.id);
 		setGifs(compiledGifs);
 		localStorage.setItem(key, JSON.stringify(compiledGifs));
 	};
