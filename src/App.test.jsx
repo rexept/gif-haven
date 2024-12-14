@@ -1,6 +1,7 @@
 import { describe, test, expect, vi, beforeAll } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { StashedGifsButton, SearchBar, GifList } from './components';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('App', () => {
 	let mockFn;
@@ -26,8 +27,16 @@ describe('App', () => {
 
 	test('renders', () => {
 		render(<SearchBar onSearchUpdate={mockFn} />);
-		render(<StashedGifsButton />);
-		render(<GifList gifs={mockGifList} />);
+		render(
+			<BrowserRouter>
+				<StashedGifsButton />
+			</BrowserRouter>
+		);
+		render(
+			<BrowserRouter>
+				<GifList gifs={mockGifList} />
+			</BrowserRouter>
+		);
 
 		expect(screen.getByTestId('SearchBar-container')).toBeDefined();
 		expect(screen.getByTestId('StashedGifsButton-container')).toBeDefined();
