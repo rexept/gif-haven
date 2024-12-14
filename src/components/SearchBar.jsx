@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import makeApiCall from '../services/api';
+import PropTypes from 'prop-types';
 import './SearchBar.css';
 
 const SearchBar = ({ onSearchUpdate }) => {
@@ -43,6 +44,10 @@ const SearchBar = ({ onSearchUpdate }) => {
 			<button data-testid='SearchBar-button' className='search-button' onClick={() => handleInputChangeP(input)}>Search</button>
 		</div>
 	);
+};
+
+SearchBar.proptypes = {
+	onSearchUpdate: PropTypes.object
 };
 
 export default SearchBar;

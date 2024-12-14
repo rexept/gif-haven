@@ -9,7 +9,7 @@ export const useGifStorage = () => {
 		if (storedGifs) {
 			setGifs(JSON.parse(storedGifs));
 		}
-	}, []);
+	}, [gifs]);
 
 	const getGifs = () => {
 		const gifs = localStorage.getItem(key);

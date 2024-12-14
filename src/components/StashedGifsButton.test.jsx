@@ -1,4 +1,4 @@
-import { describe, test, expect, vi, beforeAll } from 'vitest';
+import { describe, test, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { StashedGifsButton } from './index';
 

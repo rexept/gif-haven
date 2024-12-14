@@ -1,4 +1,4 @@
-import { describe, test, expect, vi, beforeAll } from 'vitest';
+import { describe, test, expect, beforeAll } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { GifCard } from './index';
 
