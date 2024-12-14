@@ -14,7 +14,7 @@ const SearchBar = ({ onSearchUpdate }) => {
 
 	const handleInputChangeP = (value) => {
 		setInput(value);
-		makeApiCall(value, setGifs, 30);
+		makeApiCall(value, setGifs, 35);
 	};
 
 	useEffect(() => {
@@ -23,7 +23,7 @@ const SearchBar = ({ onSearchUpdate }) => {
 
 	useEffect(() => {
 		if (input) {
-			makeApiCall(input, setGifs, 8);
+			makeApiCall(input, setGifs, 5);
 		}
 	}, [input]);
 
