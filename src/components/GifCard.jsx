@@ -34,15 +34,30 @@ const GifCard = ({ gif }) => {
 				<br />
 				{gif.username != '' ? 'Username: ' + gif.username : 'No Username'}
 			</div>
-			<button data-testid='GifCard-stash' onClick={gifToggle} className={`card-btn ${isGifInStash ? 'remove' : 'stash'}`}>
-				{isGifInStash ? 'Remove 🗑️' : 'Stash 🗳️'}
-			</button>
+			<div className='GifCard-btn-container'>
+				{!isGifInStash &&
+					<button data-testid='GifCard-stash' onClick={gifToggle} className='card-btn'>
+						Stash 🗳️
+					</button>
+				}
+				{isGifInStash &&
+					<>
+						<button data-testid='GifCard-stash-main-btn' className='card-stashed-main-btn'>
+							Stashed ✔️
+						</button>
+						<button data-testid='GifCard-stash-trash-btn' onClick={gifToggle} className='card-stashed-trash-btn'>
+							🗑️
+						</button>
+					</>
+				}
+			</div>
 		</div>
 	);
 };
 
 GifCard.propTypes = {
 	gif: PropTypes.object,
+	isHome: PropTypes.bool,
 };
 
 export default GifCard;

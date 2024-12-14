@@ -1,13 +1,15 @@
 .StashedGifsButton-container {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 250px;
 	scale: 1.2;
 }
 
 .StashedGifsButton-button {
-	background-color: crimson;
+	background-color: royalblue;
 	color: white;
-	width: 50%;
+	width: 60%;
 	border-radius: 10px;
 	border: none;
 	padding: 0.4rem;
@@ -15,12 +17,14 @@
 	transition: background-color 0.1s ease, transform 0.3s ease;
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 	text-decoration: none;
+	text-align: center;
 }
 
 .StashedGifsButton-button:hover {
+	background-color: blue;
 	transform: scale(1.05);
 }
 
 .StashedGifsButton-button:active {
-	background-color: #9B0A22;
+	background-color: royalblue;
 }

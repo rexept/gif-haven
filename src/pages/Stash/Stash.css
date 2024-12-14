@@ -26,3 +26,13 @@
 .stash-back-arrow:hover {
 	color: royalblue;
 }
+
+.stash-header-container {
+  flex-direction: column;
+}
+
+.stash-header-title {
+  color: black;
+  padding: 2rem;
+  margin: 1rem;
+}

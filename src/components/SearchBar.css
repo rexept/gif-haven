@@ -5,7 +5,7 @@
 	border-radius: 10px;
 	height: 2.5rem;
 	padding: 5px 20px;
-	box-shadow: 4px 4px 8px 4px rgb(0, 0, 0, 0.5);
+	box-shadow: 3px 3px 8px 4px rgb(0, 0, 0, 0.5);
 	display: flex;
 	place-items: center;
 	scale: 1.5;
@@ -27,22 +27,23 @@ input:focus {
 }
 
 .search-button {
-	border-radius: 5px;
-	background-color: royalblue;
+	border-radius: 8px;
+	background-color: red;
 	color: white;
+	font-weight: 600;
 	border: none;
-	padding: 5px;
+	padding: 8px;
 	text-decoration: none;
-	transition: background-color 0.3s ease, transform 0.3s ease;
+	transition: background-color 0.2s ease, transform 0.3s ease;
 }
 
 .search-button:hover {
-	background-color: #4472e1;
+	background-color: #C41E3A;
 	transform: scale(1.02);
 }
 
 .search-button:active {
-	background-color: #0836e1;
+	background-color: red;
 }
 
 #search-icon {

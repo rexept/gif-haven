@@ -10,9 +10,12 @@ const Stash = () => {
 
 	return (
 		<div data-testid='StashedGifs-container' className='stash-container'>
-			<NavLink to='/'>
-				<IoArrowBackSharp data-testid='StashedGifs-exit-button' className='stash-back-arrow' />
-			</NavLink>
+			<div className="stash-header-container">
+				<NavLink to='/'>
+					<IoArrowBackSharp data-testid='StashedGifs-exit-button' className='stash-back-arrow' />
+				</NavLink>
+				<h1 className='stash-header-title'>My Stash</h1>
+			</div>
 			<GifList data-testid='StashedGifs-gifs-container' gifs={gifs} />
 		</div>
 	);

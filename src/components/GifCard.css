@@ -5,8 +5,8 @@
 	width: 15rem;
 	margin: 0.5rem;
 	height: 425px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-	transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+	box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.8);
+	transition: background 0.3s ease, color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 	color: black;
 }
 
@@ -14,6 +14,7 @@
 	transform: scale(1.1);
 	background-color: #2E2E2E;
 	color: white;
+	box-shadow: 0 0 20px 5px rgba(0, 0, 255, 1);
 }
 
 .card-img {
@@ -32,41 +33,95 @@
 	white-space: nowrap;
 }
 
+.card-btn-container {
+	flex-direction: row;
+	justify-content: center;
+}
+
 .card-btn {
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	width: 85%;
+	height: 50px;
 	border-radius: 12px;
 	border: none;
 	padding: 0.5rem 1rem;
 	color: white;
 	margin: 0.5rem auto;
+	margin-left: 18px;
 	margin-bottom: 1rem;
 	font-size: 1.2rem;
 	transition: background-color 0.1s ease, transform 0.3s ease;
 }
 
-.card-btn.stash {
+.card-btn {
 	background-color: royalblue;
 }
 
-.card-btn.remove {
-	background-color: crimson;
-}
-
-.card-btn.stash:hover {
-	background-color: #26a;
+.card-btn:hover {
+	background-color: blue;
 	transform: scale(1.03);
 }
 
-.card-btn.remove:hover {
-	background-color: #9B0A1D;
-	transform: scale(1.03);
-}
-
-.card-btn.stash:active {
+.card-btn:active {
 	background-color: royalblue;
 }
 
-.card-btn.remove:active {
+.card-stashed-main-btn {
+	text-align: center;
+	width: 68%;
+	height: 50px;
+	border-radius: 12px;
+	border: none;
+	padding: 0.5rem 1rem;
+	color: black;
+	margin: 0.5rem auto;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+	font-size: 1.2rem;
+	transition: background-color 0.1s ease, transform 0.3s ease;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-stashed-main-btn {
+	background-color: royalblue;
+	color: white;
+	font-weight: 500;
+	padding: 3px;
+}
+
+.card-stashed-trash-btn {
+	text-align: center;
+	width: 15%;
+	height: 50px;
+	border-radius: 12px;
+	border: none;
+	padding: 1rem 1rem;
+	color: black;
+	margin: 0.5rem auto;
+	margin-bottom: 1rem;
+	margin-left: 0.5rem;
+	font-size: 1.2rem;
+	transition: background-color 0.1s ease, transform 0.3s ease;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-stashed-trash-btn {
+	background-color: white;
+	color: black;
+	font-weight: 500;
+	padding: 3px;
+}
+
+.card-stashed-trash-btn:hover {
+	color: white;
 	background-color: crimson;
+}
+
+.card-stashed-trash-btn:active {
+	color: white;
+	background-color: red;
 }
