@@ -5,7 +5,7 @@
 	border-radius: 10px;
 	height: 2.5rem;
 	padding: 5px 20px;
-	box-shadow: 0 0px 8px #bbb;
+	box-shadow: 4px 4px 8px 4px rgb(0, 0, 0, 0.5);
 	display: flex;
 	place-items: center;
 	scale: 1.5;
