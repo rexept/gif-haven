@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './StashedGifsButton.css';
 import { NavLink } from 'react-router-dom';
 
@@ -13,4 +15,4 @@ const StashedGifsButton = () => {
 	);
 };
 
-export default StashedGifsButton;
+export default React.memo(StashedGifsButton);

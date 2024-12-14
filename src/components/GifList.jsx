@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './GifList.css';
 import { GifCard } from './index';
 import PropTypes from 'prop-types';
@@ -15,8 +17,8 @@ const GifList = ({ gifs }) => {
 };
 
 GifList.proptypes = {
-	gifs: PropTypes.object
+	gifs: PropTypes.array
 };
 
 
-export default GifList;
+export default React.memo(GifList);
